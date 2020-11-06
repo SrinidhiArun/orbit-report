@@ -8,7 +8,7 @@
       <th>Launch Date</th>
    </tr>
    <!-- TODO: put <tr *ngFor=""></tr> here -->
-   <tr *ngFor="let satellite of satellites">
+   <tr [class.tr-style]="findOddOrEven(satellite)"*ngFor="let satellite of satellites">
        <td>{{satellite.name}}</td>
        <td [class.td-style]="satellite.shouldShowWarning()">{{satellite.type}}</td>
        <td>{{satellite.operational}}</td>

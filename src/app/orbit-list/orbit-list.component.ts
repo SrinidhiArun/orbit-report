@@ -24,4 +24,12 @@ export class OrbitListComponent implements OnInit {
        return 0;
     });
  }
+
+ findOddOrEven(a : Satellite):Boolean{
+   let index = this.satellites.indexOf(a);
+   if(index%2 === 0){
+     return true;
+   }
+   return false;
+ }
 }
